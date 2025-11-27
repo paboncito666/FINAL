@@ -11,3 +11,6 @@ app.get('/', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));
+
+const tasksRoutes = require('./routes/tasks.routes');
+app.use('/tasks', tasksRoutes);
